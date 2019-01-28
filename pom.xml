@@ -6,7 +6,7 @@
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Auth project for Duan Application</name>
-	<url>http://maven.apache.org</url>
+	<url>https://www.guobaa.com</url>
 	<!-- 继承父包 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
