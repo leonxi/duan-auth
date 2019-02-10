@@ -9,6 +9,19 @@ public class CreateTable extends AbstractSql {
 	private void initDdl() {
 
 		ddl.add("" + 
+				"CREATE TABLE IF NOT EXISTS `aba_oauthsite` (" +
+				"  `OPEN_APP_ID` varchar(64) NOT NULL," +
+				"  `OPEN_SECRET` varchar(64) NOT NULL," +
+				"  `LOGIN_URL` varchar(1024) NOT NULL," +
+				"  `ACCESSTOKEN` varchar(1024) NOT NULL," +
+				"  `REFRESHTOKEN` varchar(1024) NOT NULL," +
+				"  `USERINFO` varchar(1024) NOT NULL," +
+				"  `CREATE_TIME` date DEFAULT NULL," +
+				"  PRIMARY KEY (`OPEN_APP_ID`)" +
+				") ENGINE=InnoDB DEFAULT CHARSET=utf8;" +
+				"");
+
+		ddl.add("" + 
 				"CREATE TABLE IF NOT EXISTS `aba_oauthcache` (" +
 				"  `CODE` varchar(64) DEFAULT NULL," +
 				"  `STATE` varchar(128) NOT NULL," +

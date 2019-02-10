@@ -29,7 +29,7 @@ public class ApiController {
 		Map<String, String> origin = new HashMap<String, String>();
 		origin.put("OPEN_APP_ID", "d3d3Lmd1b2JhYS5jb20");
 		origin.put("OPEN_SECRET", "c2VjcmV0QHd3dy5ndW9iYWEuY29t");
-		origin.put("LOGIN_URL", "https://www.guobaa.com/auo/login");
+		origin.put("LOGIN_URL", "http://www.duan.com:7000/auo/login");
 		origin.put("ACCESSTOKEN", "http://sa-auo:8080/auo/api/access_token");
 		origin.put("REFRESHTOKEN", "http://sa-auo:8080/auo/api/refresh_token");
 		origin.put("USERINFO", "http://sa-auo:8080/auo/api/userinfo");
@@ -74,6 +74,7 @@ public class ApiController {
 		}
 
 		StringBuffer url = new StringBuffer((String) ((Map) OAUTH_MAPPING.get(verifyType)).get("LOGIN_URL"));
+
 		url.append("?appid=");
 		url.append((String) ((Map) OAUTH_MAPPING.get(verifyType)).get("OPEN_APP_ID"));
 		url.append("&redirect_uri=");
